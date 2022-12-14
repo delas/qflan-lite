@@ -19,6 +19,10 @@
 			<name>Maven repository for JARs specific to the Apromore project</name>
 			<url>https://raw.github.com/apromore/ApromoreCore_SupportLibs/master/mvn-repo/</url>
 		</repository>
+		<repository>
+			<id>qflan-lite-maven-dependencies</id>
+			<url>https://raw.github.com/delas/qflan-lite/master/maven-dependencies/repository/</url>
+		</repository>
 	</repositories>
 
 	<dependencies>
@@ -44,6 +48,10 @@
 		</dependency>
 
 		<!-- Dependency for multivestaQFLan -->
-	
+		<dependency>
+			<groupId>qflan</groupId>
+			<artifactId>multivestaQFLan</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

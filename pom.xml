@@ -7,15 +7,6 @@
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-
-		<!-- Where Java files corresponding to the Hero DSL main files will be generated
-			by the xtext-maven-plugin -->
-		<hero-generated-sources>src/main/generated-sources/hero/</hero-generated-sources>
-		<!-- This corresponds to the default value for xtend-maven-plugin compile goal  -->
-		<xtend-generated-sources>src/main/generated-sources/xtend/</xtend-generated-sources>
-		<!-- This corresponds to the default value for xtend-maven-plugin testCompile goal -->
-		<xtend-generated-test-sources>src/test/generated-sources/xtend/</xtend-generated-test-sources>
-
 	</properties>
 
 	<repositories>
@@ -55,18 +46,22 @@
 			<artifactId>spex</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>guru.nidi</groupId>
+			<artifactId>graphviz-java</artifactId>
+			<version>0.18.1</version>
+		</dependency>
 
 		<!-- Dependency for multivestaQFLan -->
 		<dependency>
 			<groupId>qflan</groupId>
 			<artifactId>multivestaQFLan</artifactId>
 			<version>1.1.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.eclipse.xtend</groupId>
-			<artifactId>org.eclipse.xtend.lib</artifactId>
-			<version>2.29.0</version>
 		</dependency>
 	</dependencies>
 </project>

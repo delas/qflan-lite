@@ -15,6 +15,7 @@ import com.microsoft.z3.Z3Exception;
 
 import it.imt.qflan.core.model.QFlanModel;
 import it.imt.qflan.core.multivesta.QFlanJavaState;
+import qflan.lite.graphviz.GraphExporter;
 import qflan.lite.utils.XLogHelper;
 
 public class TestLoadModel {
@@ -54,7 +55,14 @@ public class TestLoadModel {
 			log.add(trace);
 		}
 		
+		// serialize the log
 		new XesXmlSerializer().serialize(log, new FileOutputStream(new File("log.xes")));
+		
+		// mine a simple DFG and export it as SVG
+		SimpleDFG dfg = new SimpleDFG(log);
+		dfg.compute();
+		GraphExporter.exportSVG(dfg.toDot(0), new File("dfg.svg"));
+		
 		System.out.println("Done");
 	}
 }
